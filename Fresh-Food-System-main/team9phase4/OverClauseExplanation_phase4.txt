@@ -1,0 +1,34 @@
+The GROUP BY clause is used to group the results of aggregate functions according to a specified column. However, the GROUP BY clause doesn’t perform aggregate operations on multiple levels of a hierarchy.
+
+
+ROLLUP operators let you extend the functionality of GROUP BY clauses by calculating subtotals and grand totals for a set of columns. 
+
+CUBE operator can calculate subtotals and grand totals for all permutations of the columns specified in it. It is used to view data in all perspectives. 
+
+
+
+The OVER clause is used to determine which rows from the query are applied to the function, what order they are evaluated in by that function, and when the function’s calculations should restart.
+
+
+PARTITION BY that divides the query result set into partitions.
+
+The PARTITION BY clause is used to divide the result set from the query into data subsets, or partitions. 
+If the PARTITION BY clause is not used, the entire result set from the query is the partition that will be used. 
+
+The window function being used is applied to each partition separately, and the computation that the function performs is restarted for each partition. You define a set of values which determine the partition(s) to divide the query into. 
+For example: In our query the aggregate functions are partitioned by each of the product. We will have multiple rows because of orderId Column
+
+So, we are partitioning by each product separately 
+
+	order_id	min 	max	avg	total
+pid=1				
+pid=1
+pid=1
+
+pid=2
+pid=2
+pid=2
+
+
+
+Notice that the aggregates are calculated by product id and aggregate of every quantity is calculated for each line of each product id.
