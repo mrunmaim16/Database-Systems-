@@ -14,7 +14,7 @@ java -classpath <path-of-ojdbc8-21.1.0.0.jar>; Main
 For example:
 
 ```bash
-java -classpath C:/Users/sameer/IdeaProjects/db1/src/ojdbc8-21.1.0.0.jar; Main
+java -classpath C:/Users/mrunmai/IdeaProjects/db1/src/ojdbc8-21.1.0.0.jar; Main
 ```
 
 **Table of Contents:**
